@@ -1,7 +1,6 @@
 # bash-commands
 
 SSH - Running the SSH command on its own returns a list of SSH command parameters and options. As you can see in the screenshot from the terminal.
-[[/ssh/ssh.png|ALT TEXT]]
 
 SSH userid - used user id and password to connect to a remote host
 
