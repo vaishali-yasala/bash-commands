@@ -2,8 +2,9 @@
 
 SSH - Running the SSH command on its own returns a list of SSH command parameters and options. As you can see in the screenshot from the terminal.
 
-![Alt text](/Users/vaishaliyasala/Documents/bash-commands/ssh/ssh.png) "links to ssh command image"
-![Alt text](/ssh/ssh.png) "links to ssh command image"
+Input - ssh 
+
+(/ssh/ssh.png) 
 
 SSH userid - used user id and password to connect to a remote host
 
