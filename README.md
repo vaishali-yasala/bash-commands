@@ -5,6 +5,7 @@ SSH - Running the SSH command on its own returns a list of SSH command parameter
 Input -ssh
 
 ![Alt text](/Users/vaishaliyasala/Documents/bash-commands/ssh/ssh.png)
+![Alt text](/ssh/ssh.png)
 
 SSH userid - used user id and password to connect to a remote host
 
