@@ -15,11 +15,12 @@ In this case, user id and password provides a connection to a remote host using 
 Command: ssh UserName@IPAddress
 
 #### OUTPUT
-After connecting to remote server, testing to see the contents it. <br>
+After connecting to remote server, testing to see the contents it. 
+
 ![Alt text](/ssh/ssh_userID_password.png)
 
 ### SSH USING THE KEY FILE 
-used ssh key pair file to connect to the remote host from local host
+Using ssh key pair file to connect to the remote host from local host
 
 #### INPUT
 1. Initially checking for the key files in the local machine. 
@@ -38,5 +39,3 @@ ssh-keygen is a program to create a new authentication key pair for SSH, which c
 ssh-copy-id is a program used to copy, install and configure an SSH key on a server to automate passwordless logins and SSO. <br> Command: ssh-copy-id -i ~/.ssh/example_key.pub example_user@IPaddress (Specify the public key to be transferred with the -i option. Replace the example with your username and the server's IP address.)
 
  ![Alt text](/ssh/ssh_password_less.png)
-
- I'm just checking to see if this actually works!
