@@ -81,7 +81,7 @@ This image shows the login to the remote machine, creating a file on there and c
 ![Alt text](/scp/scp_login_and_file.png)
 
 #### Image 2:
-This image shows the command to copy the file created earlier from the remote server to the local computer.
+This image shows the command to copy the file created earlier on the remote server to the local computer.
 
 ![Alt text](/scp/sch_remote_to_local.png)
 
