@@ -47,15 +47,37 @@ Command: scp [OPTION] [user@]SRC_HOST:]file1 [user@]DEST_HOST:]file2 <br>
 2. [user@]SRC_HOST:]file1 - Source file. <br>
 3. [user@]DEST_HOST:]file2 - Destination file. <br>
 
+### Copying a File from a Local Computer to a Remote Server
+
 #### INPUT
-Copying a file from local host to a remote server and naming what the file should be called. Here, in this case, it is called scp_eg.txt on local host and scp_example.txt on the remote server.  <br> Command: scp /Users/vaishaliyasala/Desktop/scp_eg.txt root@207.246.104.234:/root/scp_example.txt 
+Copying a file from local host to a remote server and naming what the file should be called. Here, in this case, it is called scp_eg.txt on local computer and scp_example.txt on the remote server.  <br> Command: scp /Users/vaishaliyasala/Desktop/scp_eg.txt root@207.246.104.234:/root/scp_example.txt 
 
 #### OUTPUT
-The first image is to show ssh passwordless login to the remote server. And also, to show the file has been copied to the remote server with the ls command before and after the transfer. <br> Second one is to show the result of input command given above.
-
 #### Image 1:
+The first image is to show ssh passwordless login from the local computer to the remote server. And also, to show the file existence on the remote server with the ls command before and after the transfer.
+
 ![Alt text](scp/scp_login.png)
 
 #### Image 2:
+ Second one is to show the result of input command given above.
+
 ![Alt text](scp/scp_local_to_remote.png)
+
+### Copying a File from a Remote Server to a Local Computer
+Connecting to the remote server and then creating a file "a-file.txt" with text "Hello World" in it. Then, copying this file from remote server to the local computer. 
+
+#### INPUT 
+Command: scp root@207.246.104.234:/root/a-file.txt ~/Desktop/a-file.txt  
+
+#### OUTPUT
+#### Image 1:
+This image shows the login to the remote machine, creating a file on there and checking if it worked.
+
+![Alt text](/scp/scp_login_and_file.png)
+
+#### Image 2:
+This image shows the command to copy the file created earlier from the remote server to the local computer.
+
+![Alt text](/scp/sch_remote_to_local.png)
+
 
