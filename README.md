@@ -134,6 +134,42 @@ The image below shows moving "a-file-copy.txt" file Desktop directory to Command
 
 ![Alt Text](/cp/mv_file_to_directory.png)
 
+## GREP and How to Make Pipe Commands
+grep stands for global regular expression print. It searches a file for a particular pattern of characters and prints them. <br>
+Options:
+1. -c : This prints only a count of the lines that match a pattern
+2. -h : Display the matched lines, but do not display the filenames.
+3. -i : Ignores, case for matching
+4. -l : Displays list of a filenames only.
+5. -n : Display the matched lines and their line numbers.
+6. -v : This prints out all the lines that do not matches the pattern
+7. -e exp : Specifies expression with this option. Can use multiple times.
+8. -f file : Takes patterns from file, one per line.
+9. -E : Treats pattern as an extended regular expression (ERE)
+10. -w : Match whole word
+11. -o : Print only the matched parts of a matching line,
+ with each such part on a separate output line.
+12. -A n : Prints searched line and nlines after the result.
+13. -B n : Prints searched line and n line before the result.
+14. -C n : Prints searched line and n lines after before the result.
+
+> Command: grep [OPTIONS] pattern [FILES]
+
+#### INPUT
+In the image below, searching for a row in a csv file located in Downloads, with reference to a specific word. 
+
+#### OUTPUT
+![Img](/grep/search.png)
+
+Some of the other options I used on a .txt file with Unix written in various forms. Some of these options can be combined and they are shown in the command line of the image below:
+
+![Img](/grep/Other_Options.png)
+
+## MKDIR
+
+Making a directory with using mkdir in the command line. This can be used to make a single directory or multiple directories. It can also be used to make a sub-directory in a directory and the same is shown in the image below.
+
+![Img](/mkdir/various_mkdir.png)
 
 
 
