@@ -172,4 +172,47 @@ Making a directory with using mkdir in the command line. This can be used to mak
 ![Img](/mkdir/various_mkdir.png)
 
 
+## check which process are running
+ps - ps command stands for process status. It gives out a list of running processes. man ps command gives the list of options and how to use them.
+#### INPUT 
+ps <br>
+You can also use the _**top**_ task manager command in Linux to see a real-time sorted list of top processes that use the most memory or CPU.
+#### OUTPUT
+The otput below displays all the processes that are running on this machine. The columns represent the following:<br> 
+PID returns the unique process ID. <br> TTY  returns the terminal type it is logged on. <br> TIME returns the total amount of CPU usage. <br> CMD returns the name of the command that launched the process.
 
+![img](/ps/ps_command.png)
+
+When listing processes, it could be a long list. We can make use of pipe to display a specific process (eg: Safari) that matches a particular name as shown below:
+
+![img](/ps/ps_pipe_grep.png)
+
+## Output Redirection
+Initiallt, redirecting the output result of a command in the terminal to a specific file.
+
+#### INPUT
+> Command: ls -l
+<br>
+This command returns the list of files inside a directory.
+
+> Command: ls -l > file.txt <br>
+This command creates the file "file.txt" and redirects the output of ls -l command into it.
+
+> Command: ls -l >> file.txt <br>
+Running this command multiple times adds more output resulting in a larger file. 
+
+> Command: ls -l | grep file <br>
+By using pipe here, the output of ls -l command is redirected to the next command grep file.
+
+#### OUTPUT
+Image 1:
+![Img](/Output_directory/list.png)
+
+Image 2: 
+![img](/Output_directory/redirecting.png)
+
+Image 3:
+![img](/Output_directory/add_more.png)
+
+Image 4:
+![img](/Output_directory/redirected_to_another.png)
