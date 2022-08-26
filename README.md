@@ -190,7 +190,7 @@ When listing processes, it could be a long list. We can make use of pipe to disp
 ![img](/ps/ps_pipe_grep.png)
 
 ## Output Redirection
-Initiallt, redirecting the output result of a command in the terminal to a specific file.
+Initiallt, redirecting the output result of a command from the terminal to a specific file.
 
 #### INPUT
 > Command: ls -l <br>
@@ -236,9 +236,47 @@ Image 2: <br>
 This image is the screenshot of a different terminal to view if any processes are running on http server. It shows the before and after result of the process that has been executed. 
 ![img](/running_a_process_in_the_background/check_process.png)
 
-### Using nohup
-nohup is known to invoke a utility immune to hangups. It is used to keep a process running in the background even if the terminal in which the command is executed accidentally shuts off. In the image below, you can see an example of nohup command.
+### Background running process even after session ended
+### 1. Using nohup
+nohup is known to invoke a utility immune to hangups. It is used to keep a process running in the background even if the terminal in which the command is executed accidentally shuts off. <br>
+
+In the image below, you can see an example of nohup command.
 ![img](/running_a_process_in_the_background/nohup.png)
-The image below shows if nohup is working. It is the screenshot of a different terminal. 
+The image below shows if nohup is working. It is the screenshot of ps command from a different terminal. 
 ![img](/running_a_process_in_the_background/nohup_different_terminal.png)
+
+### 2. Using disown
+**disown** command removes all the jobs running in the current terminal. But they can be seen running in the background on a different terminal with ps command.
+#### INPUT
+> Command: disown %n <br>
+where n is the job number
+
+![img](/running_a_process_in_the_background/disown.png)
+
+Below image of a second terminal where it shows the  processes are running in the background. It is executed after they don't show up as running with jobs command in their current terminal.
+
+![img](/running_a_process_in_the_background/disown_ps_check.png)
+
+## Running a process in the background with output redirection
+In Output Redirection section above, we used the symbol '>' in syntax before the path of destination file. The same is used for running a process in the background to redirect the output to a destination file. 
+
+#### INPUT
+nohup helps in running the process even if the terminal shuts off and '&' at the end to make it run in the background.
+
+> Command: nohup python3 -m http.server 8080 > 
+/Users/vaishaliyasala/Commands_files/html_template/some_file.txt &
+
+#### OUTPUT
+![img](/running_a_process_in_the_background/output_redirection.png)
+
+
+## Check process running on a port
+In the section above, we were a process on port 8080. Let's check if port 8080 is in use with lsof command given below.
+#### INPUT
+> Command: lsof -i :port_number
+
+#### OUTPUT
+![img](/lsof/lsof.png)
+
+
 
