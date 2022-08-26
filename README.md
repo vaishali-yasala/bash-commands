@@ -175,7 +175,9 @@ Making a directory with using mkdir in the command line. This can be used to mak
 ## check which process are running
 ps - ps command stands for process status. It gives out a list of running processes. man ps command gives the list of options and how to use them.
 #### INPUT 
-ps <br>
+> ps 
+<br>
+
 You can also use the _**top**_ task manager command in Linux to see a real-time sorted list of top processes that use the most memory or CPU.
 #### OUTPUT
 The otput below displays all the processes that are running on this machine. The columns represent the following:<br> 
@@ -191,8 +193,7 @@ When listing processes, it could be a long list. We can make use of pipe to disp
 Initiallt, redirecting the output result of a command in the terminal to a specific file.
 
 #### INPUT
-> Command: ls -l
-<br>
+> Command: ls -l <br>
 This command returns the list of files inside a directory.
 
 > Command: ls -l > file.txt <br>
@@ -216,3 +217,28 @@ Image 3:
 
 Image 4:
 ![img](/Output_directory/redirected_to_another.png)
+
+## Running a process in the background
+Running a process in the terminal can sometimes occupy it, hindering it from running any other executable command. In such cases, running a process in the background can free up the terminal to run other processes.
+
+#### INPUT
+Inserting an ampersand '&' at the end of syntax before exexcuting it makes the process run in the background. The example command below running by itself would make the terminal unavailable for 100 seconds but with an ampersand, it runs in the background.
+> Command: sleep 100 &
+
+This can also be achieved with _**bg**_ command. 
+
+#### OUTPUT
+Image 1: <br>
+The image below explains the use of & and bg commands to help run processes in the background.
+![img](/running_a_process_in_the_background/%26_fg_bg.png)
+
+Image 2: <br>
+This image is the screenshot of a different terminal to view if any processes are running on http server. It shows the before and after result of the process that has been executed. 
+![img](/running_a_process_in_the_background/check_process.png)
+
+### Using nohup
+nohup is known to invoke a utility immune to hangups. It is used to keep a process running in the background even if the terminal in which the command is executed accidentally shuts off. In the image below, you can see an example of nohup command.
+![img](/running_a_process_in_the_background/nohup.png)
+The image below shows if nohup is working. It is the screenshot of a different terminal. 
+![img](/running_a_process_in_the_background/nohup_different_terminal.png)
+
