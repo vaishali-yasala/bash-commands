@@ -327,4 +327,19 @@ On Mac, there are certain files that are important and not to be made changes to
 The command above makes the hidden files visible.
 > killall Finder
 
-This command refreshes the finder application and the hidden files are directly viewable if the finder is already open. Else, open the finder after the executing the command and the hidden files become visible. 
+This command refreshes the finder application and the hidden files are directly viewable if the finder is already open as shown in Image 2 in output below. Else, open the finder after the executing the command and the hidden files become visible. 
+
+![img](/hidden_files/Defualts_true.png)
+
+To hide the hidden files again, just use the following commands shown in the image below. The folder looks like image 1  shown in output below.
+
+![img](/hidden_files/Defaults_false.png)
+
+#### OUTPUT
+**Image 1** : Look at the user folder how it appears normally.
+
+![img](/hidden_files/Before_file_folder.png)
+
+**Image 2** : The image below shows all the hidden files.
+
+![img](/hidden_files/After_file_folder.png)
