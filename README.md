@@ -331,7 +331,10 @@ This command refreshes the finder application and the hidden files are directly 
 
 ![img](/hidden_files/Defualts_true.png)
 
-To hide the hidden files again, just use the following commands shown in the image below. The folder looks like image 1  shown in output below.
+To hide the hidden files again, just use the following command.
+> defaults write com.apple.Finder AppleShowAllFiles false
+
+Refresh it again as shown in the image below. The folder looks like image 1 shown in output below.
 
 ![img](/hidden_files/Defaults_false.png)
 
@@ -343,3 +346,36 @@ To hide the hidden files again, just use the following commands shown in the ima
 **Image 2** : The image below shows all the hidden files.
 
 ![img](/hidden_files/After_file_folder.png)
+
+## LS Command
+ls command lists all the contents in a directory. 
+
+**OPTIONS** :
+
+1. -l - lists the information of the files with columns indicating file mode, number of links, owner name, group name, number of bytes in the file, date, time and the path name. 
+2. -d - Directories are listed as plain files (not listed Recursively).
+3. -r - Reverse the order of the sort.
+
+#### INPUT
+Some of the command lines that are used:
+
+> ls <br> 
+> ls -l <br>
+> ls [options] [directory]
+
+#### OUTPUT
+
+![img](/ls/Output_Image_1.png)
+
+### Additional Options: 
+1. ls / command to list the contents of the root directory.
+2. ls .. command to list the contents of the parent directory one level above. Use ls ../.. for contents two levels above.
+3. ls ~ command to list the contents in the users's home directory.
+4. ls -d */ command to list only directories.
+
+![img](/ls/Output_Image_2.png)
+
+In the terminal, executing *man ls* gives information about ls command and its various options and they can be used accordingly. 
+
+
+
