@@ -278,5 +278,53 @@ In the section above, we were a process on port 8080. Let's check if port 8080 i
 #### OUTPUT
 ![img](/lsof/lsof.png)
 
+## Firewall 
+Firewall provides an added layer of protection against cyber attacks by shielding the computer or network from malicious or unnecessary network traffic. Firewalls can also prevent malicious software from accessing a computer or network via the internet.
+
+### Add a port 
+In this case, checking if the firewall is turned for the computer. Once it is turned on, we can add additional settings making it accessible only to certain ports. This can be seen in the following steps: 
+
+1. The command below is used to stop the pf (packet filter) firewall if it's active:
+> sudo pfctl -d 
+
+Packet filtering is a firewall technique used to control network access by monitoring outgoing and incoming packets and allowing them to pass or halt based on the source and destination Internet Protocol (IP) addresses, protocols and ports.
+![img](/firewall/pf.png)
+
+2. Next, use the nano text editor to open the configuration file for pf:
+
+>sudo nano /etc/pf.conf
 
 
+3. The editor will show the contents of the default config, which contains some important stuff. Here, we can add custom rules, but it has to be below the existing configurations.
+
+![img](/firewall/config_file.png)
+
+To break down the rule written in the default config file above, it is allowing (__pass__) incoming (__in__) TCP (__inet proto tcp__) traffic from any machine to any other machine (__in this context, just this machine__) on port 12044 with no state inspection.
+
+4. To re-load the firewall's configuration from the file edited before (rule added): 
+
+>sudo pfctl -f /etc/pf.conf
+
+![img](/firewall/re-load.png)
+
+5. To re-start the firewall:
+
+> sudo pfctl -E
+
+![img](/firewall/pf_enabled.png)
+
+With this, port 12044 is opened through the firewall security. 
+
+### Remove a port
+
+
+## Show hidden files
+On Mac, there are certain files that are important and not to be made changes to. Such files are hidden and to view those files, we can either use finder or through terminal. 
+
+#### INPUT
+> defaults write com.apple.Finder AppleShowAllFiles true
+
+The command above makes the hidden files visible.
+> killall Finder
+
+This command refreshes the finder application and the hidden files are directly viewable if the finder is already open. Else, open the finder after the executing the command and the hidden files become visible. 
