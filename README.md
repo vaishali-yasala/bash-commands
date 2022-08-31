@@ -375,7 +375,51 @@ Some of the command lines that are used:
 
 ![img](/ls/Output_Image_2.png)
 
-In the terminal, executing *man ls* gives information about ls command and its various options and they can be used accordingly. 
+In the terminal, executing *man ls* gives information about ls command and its various options and how to use them accordingly. 
 
+## VI Command for Editing
 
+VI command is used to open an interactive text editor that can be used to create and modify text files. The vi editor can be helpful in some cases where to edit a certain files without changing the permission of the files. The Vim editor is an improved version of the vi editor and it has replaced the vi editor on the current computer. 
+
+#### INPUT
+Usually vi editor is started to edit a single file with the command below if the file is in the current directory. 
+> vi file <br>
+
+![img](/vi/command.png)
+
+If the file is in another directory, give the full pathname in the command as shown below to begin editing:
+> vi /usr/johndoe/testfolder <br>
+
+![img](/vi/vi_path.png)
+
+**Commands to Edit a File:**
+1. i - To insert text and make changes to a file in the vi editor.
+2. esc - To return to Command mode. 
+3. :w - This will let you save the changes made to a file in the vi editor.
+4. :wq - To save the changes made and quit the vi editor.
+5. :q! - To quit vi editor without saving any changes made to a file. This is useful if any accidental changes have been made. 
+6. :e! - To wipe out all the changes made to a file and return to the last saved version of the file. 
+7. :w! - To the overwrite the current existing file.
+
+**Movement Inside the File:**
+1. h - left, one space
+2. j - down, one line 
+3. k - up, one line
+4. l - right, one space <br>
+
+Eg: Typing 10l moves the cursor to ten spaces to the right and the same applies for the letter commands given above.
+
+5. 0 - Move to beginning of line.
+6. $ - Move to end of the line.
+7. w - To move forward one word at a time. 
+8. b - To move backward one word at a time. 
+
+#### OUTPUT
+
+When the file is initially opened in the vi editor. To edit the file, i (insert) is used.
+![img](/Vi/vi_editor.png)
+
+The image below is after using the commands given above to edit the file by making changes and saving it. 
+
+![img](/Vi/after_editing.png)
 
