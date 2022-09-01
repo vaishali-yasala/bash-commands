@@ -451,4 +451,76 @@ As shown in the image 2 below, pwd command gave us the current working directory
 
 ![img](/Absolute_Relative/Relative_path.png)
 
+## How is linux filesystem organized
+
+1. / (Root Directory) - The entire Linux directory starts at the top(/) with the root directory. The only root user has the right to write under this directory.
+#### INPUT 
+> ls /
+#### OUTPUT 
+![img](/filesystem/root_directory.png)
+
+2. /bin - It is a directory which contains important executable programs and core operating system commands such as ps, mv, mkdir etc. In modern linux distributions, this is symbolically linked to usr/bin.
+#### INPUT 
+> ls /bin
+#### OUTPUT 
+![img](/filesystem/bin.png)
+
+3. /boot - Contains the static bootloader and kernel executable and configuration files required to boot a Linux computer.
+
+4. /dev - This directory contains the device files for every hardware device attached to the system. These are not device drivers, rather they are files that represent each device on the computer and facilitate access to those devices. These files are dynamically created based on the various physical and virtual devices connected to the system. 
+
+> ls /dev
+
+5. /etc - This directory contains your critical configuration files and startup scripts. If we are to add a port to be allowed through the firewall, we change its configuration file and it is located in /etc directory.
+
+> ls /etc/
+
+![img](/filesystem/etc.png)
+6. /home - Home directory is the location for individual user home directories. Each user has a subdirectory in /home. The ~ in the terminal means the directory you are starting is your personal home directory. 
+
+> ls /home
+
+![img](/filesystem/home.png)
+
+7. /lib - This directory holds the shared library files that are required to boot the system. These shared libraries enable multiple programs to share code with each other. 
+> ls /lib
+
+8. /media - Mount point for file systems stored on external removable media devices such as USB thumb drives that may be connected to the host.
+
+9. /mnt - Mount or mnt directory is a temporary mountpoint for regular filesystems (as in not removable media) that can be used while the administrator is repairing or working on a filesystem.
+
+10. /opt - This is the directory where optional software packages are placed. 
+
+> ls -l /opt
+
+Homebrew is a software package management system that lets you install software on Linux or macOS. 
+![img](/filesystem/opt.png)
+
+11. /root - This is not the (/) root filesystem. This is the home directory for the root user. This user has the ultimate power on the system.  
+
+12. /run - This directory contains information describing your system since the boot time such as who is logged in and what daemons might be running. Daemons are utility programs that run silently in the background to monitor and take care of certain subsystems to ensure that the operating system runs properly.
+
+13. /sbin - This directory contains system essential files similar to the /bin directory . These are executables used by system adminstrator for maintainance purposes. 
+
+> ls /sbin
+
+14. /tmp - A directory for temporary files. Often not preserved between system reboots, and can keep any number of files temporarily. 
+
+> ls -l /tmp
+
+![img](/filesystem/tmp.png)
+
+15. /usr -  This contains most of the programs and utilities  your system will be running. These are shareable between all users, and hence they are read-only except via root or sudo. It contains binaries, libraries, documentation.  For example, if you can't find user binary under /bin, look under /usr/bin.
+
+> ls -l /usr
+
+![img](/filesystem/usr.png)
+
+16. /var - System specific Variable data files are stored in this directory. This can include log files, database files, web server data files and much more. 
+
+> ls /var
+
+![img](/filesystem/var.png)
+
+These are some of the important directories to get to know while understanding how linux filesystem is distributed. By executing *man hier* command in the terminal, you can find out more information about your system hierarchy. 
 
