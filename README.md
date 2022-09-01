@@ -385,12 +385,12 @@ VI command is used to open an interactive text editor that can be used to create
 Usually vi editor is started to edit a single file with the command below if the file is in the current directory. 
 > vi file <br>
 
-![img](/vi/command.png)
+![img](/Vi/command.png)
 
 If the file is in another directory, give the full pathname in the command as shown below to begin editing:
 > vi /usr/johndoe/testfolder <br>
 
-![img](/vi/vi_path.png)
+![img](/Vi/vi_path.png)
 
 **Commands to Edit a File:**
 1. i - To insert text and make changes to a file in the vi editor.
@@ -423,3 +423,57 @@ The image below is after using the commands given above to edit the file by maki
 
 ![img](/Vi/after_editing.png)
 
+
+## Navigating absolute and relative paths
+
+An absolute path is defined as specifying the location of a file or directory from the root directory(/). In other words,we can say that an absolute path is a complete path from start of actual file system from / directory.
+
+#### INPUT
+To read a file from one of the directories of the current directory, we cannot dirrectly access it by writing the filename in the command line. Instead, it needs to be read by mentioning its full path in the command line. 
+
+Here, the path of the file we are trying to read path is /Users/vaishaliyasala/Commands_files/a-file-copy.txt. That means it is addressed from the root directory.
+
+> cat /Users/vaishaliyasala/Commands_files/a-file-copy.txt
+
+#### OUTPUT 
+The file a-file-copy.txt has Hello World written inside it and let us look at it from the terminal with read command given above. 
+Image 1:
+![img](/Absolute_Relative/Absolute_path.png)
+
+Relative path is defined as the path related to the present working directly(pwd). It starts at your current directory and never starts with a / .
+
+#### INPUT
+As shown in the image 2 below, pwd command gave us the current working directory. To read this text file from the current working directory, using relative path is the easy way to go. 
+
+> cat Commands_files/a-file-copy.txt 
+
+#### OUTPUT
+
+
+
+
+
+
+
+## How is linux filesystem organized
+
+## How to add to a path to the path variable
+
+## EXPORT command
+
+## Check how many user accounts are there on the machine. 
+
+## How to switch between users 
+
+## Create a new user 
+## Check user home dir 
+## Delete the new user 
+## Adding groups to the user 
+## Removing groups from the user 
+Changing file permissions 
+Changing dir permissions 
+Make a file read only, read and write , read and write and execute 
+How to make a file executable 
+Make a folder read only, read and write , read and write and execute
+Recursive commands with some examples 
+Find command usage 
