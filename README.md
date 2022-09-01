@@ -449,31 +449,6 @@ As shown in the image 2 below, pwd command gave us the current working directory
 
 #### OUTPUT
 
+![img](/Absolute_Relative/Relative_path.png)
 
 
-
-
-
-
-## How is linux filesystem organized
-
-## How to add to a path to the path variable
-
-## EXPORT command
-
-## Check how many user accounts are there on the machine. 
-
-## How to switch between users 
-
-## Create a new user 
-## Check user home dir 
-## Delete the new user 
-## Adding groups to the user 
-## Removing groups from the user 
-Changing file permissions 
-Changing dir permissions 
-Make a file read only, read and write , read and write and execute 
-How to make a file executable 
-Make a folder read only, read and write , read and write and execute
-Recursive commands with some examples 
-Find command usage 
